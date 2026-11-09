@@ -1,0 +1,16 @@
+name: Synthetic camera tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Install system Python and synthetic capture dependencies
+        run: sudo apt-get update && sudo apt-get install -y python3 python3-gi gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gir1.2-gdkpixbuf-2.0
+      - name: Run synthetic tests without physical camera capture
+        run: /usr/bin/python3 -m unittest -v

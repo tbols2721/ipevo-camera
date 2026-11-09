@@ -1,0 +1,11 @@
+{
+  "name": "ipevo-camera",
+  "version": "0.2.1",
+  "description": "Capture photos and control real focus, exposure, and image settings on a local IPEVO camera.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "IPEVO Camera",
+    "shortDescription": "Capture photos and adjust document camera settings"
+  }
+}

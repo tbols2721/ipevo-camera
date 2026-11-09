@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.zip
+outputs/
+work/
+# Local diagnostics and private Git backups
+*.log
+*.bundle
+*.pcap
+*.pcapng
+*.pem
+*.key
+local/
